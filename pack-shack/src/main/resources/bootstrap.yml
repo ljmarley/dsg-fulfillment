@@ -1,0 +1,11 @@
+#################
+# local configs #
+#################
+
+spring.application.name: ...
+
+encrypt.key: ...
+
+spring.cloud.config:
+  enabled: false
+  uri: ...
