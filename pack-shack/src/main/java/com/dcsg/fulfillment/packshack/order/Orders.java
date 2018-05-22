@@ -15,40 +15,42 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "ORDERS")
+@Getter
+@Setter
 public class Orders {
 
 	@Id
 	@Column(name = "ORDER_ID")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ORDER_ID")
 	@SequenceGenerator(name = "SEQ_ORDER_ID", sequenceName = "SEQ_ORDER_ID", allocationSize = 1, initialValue = 1)
-	private @Getter @Setter Long id;
+	private  Long id;
 	
 	@Column(name = "TC_ORDER_ID")
-	private @Getter @Setter String distributionOrderId;
+	private String distributionOrderId;
 	
 	@Column(name = "PURCHASE_ORDER_NUMBER")
-	private @Getter @Setter String customerOrderId;
+	private String customerOrderId;
 
 	@Column(name = "DO_STATUS")
-	private @Getter @Setter String status;
+	private String status;
 
 	@Column(name = "DSG_SHIP_VIA")
-	private @Getter @Setter String shipVia;
+	private String shipVia;
 
 	@Column(name = "O_FACILITY_ALIAS_ID")
-	private @Getter @Setter String storeId;
+	private String storeId;
 
 	@Column(name = "ORDER_TYPE")
-	private @Getter @Setter String orderType;
+	private String orderType;
 
 	@Column(name = "PICKLIST_ID")
-	private @Getter @Setter String picklistId;
+	private String picklistId;
 
 	@Column(name = "EFFECTIVE_RANK")
-	private @Getter @Setter String rank;
+	private String rank;
 
 	@Column(name = "LAST_UPDATED_DTTM")
-	private @Getter @Setter LocalDateTime lastUpdatedTime;
+	private LocalDateTime lastUpdatedTime;
 
 	protected Orders() {}
 
